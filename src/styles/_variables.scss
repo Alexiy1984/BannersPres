@@ -1,0 +1,23 @@
+$breakpoints: (
+  small: 768px,
+  medium: 992px,
+  large: 1200px,
+);
+
+$title_sizes: (
+  null: (32px, 42px, normal),
+  small: (42px, 52px, -1px),
+  medium: (52px, 62px, -1px),
+);
+
+$subtitle_sizes: (
+  null: (18px, 22px, normal),
+  small: (20px, 26px, normal),
+  medium: (22px, 28px, -0.7px),
+);
+
+$title_lower_sizes: (
+  null: (32px, 40px, normal),
+  small: (42px, 50px, -1.5px),
+  medium: (52px, 60px, -1.7px),
+);

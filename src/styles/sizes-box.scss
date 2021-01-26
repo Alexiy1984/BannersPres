@@ -1,0 +1,19 @@
+.sizes-box {
+  &__button {
+    display: inline-block;
+    padding: 10px 14px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.4px;
+    border-radius: 22px;
+    color: rgba(61, 126, 252, 0.6);
+    transition: background-color 0.15s ease-in, color 0.15s ease-in;
+
+    &:hover,
+    &.active {
+      cursor: pointer;
+      background-color: #3d7efc;
+      color: #fff;
+    }
+  }
+}

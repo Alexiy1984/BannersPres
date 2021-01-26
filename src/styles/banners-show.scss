@@ -1,0 +1,72 @@
+$banners-show-margins: (
+  null: (30px, 0, 60px, 0),
+  small: (40px, 0, 70px, 0),
+  medium: (50px, 0, 90px, 0),
+);
+
+.banners-show {
+  @include element-indent($banners-show-margins, 'margin');
+
+  &__item {
+    position: relative;
+    width: 100%;
+    height: 0;
+    padding-bottom: 100%;
+    margin-bottom: 30px;
+    background-color: #f7f8fa;
+    border-radius: 8px;
+
+    img {
+      position: absolute;
+      width: calc(100% - 60px);
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    &_big {
+      @extend .banners-show__item;
+
+      padding-bottom: 65%;
+    }
+
+    &_small {
+      @extend .banners-show__item;
+
+      height: auto;
+      padding: 30px;
+
+      img {
+        position: relative;
+        top: 0;
+        left: 0;
+        transform: none;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .banners-show {
+    &__item {
+      border-radius: 10px;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .banners-show {
+    &__item {
+      border-radius: 12px;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .banners-show {
+    &__item {
+      border-radius: 15px;
+    }
+  }
+}

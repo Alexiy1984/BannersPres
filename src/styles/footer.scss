@@ -1,0 +1,31 @@
+.footer {
+  &__title {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 28px;
+    letter-spacing: -0.2px;
+    margin-bottom: 15px;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+
+    .link {
+      color: rgba(#000, 0.5);
+      transition: color 0.15s ease-in;
+
+      &:hover {
+        text-decoration: none;
+        color: rgba(#000, 0.8);
+      }
+    }
+  }
+
+  &__info {
+    a {
+      display: block;
+      margin-bottom: 24px;
+    }
+  }
+}

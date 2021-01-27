@@ -1,6 +1,22 @@
+$footer-paddings: (
+  null: (40px, 0, 22px, 0),
+  small: (45px, 0, 25px, 0),
+  medium: (50px, 0, 28px, 0),
+);
+
+$footer-bottom-margins: (
+  null: (50px, 0, 0, 0),
+  small: (65px, 0, 0, 0),
+  medium: (70px, 0, 0, 0),
+);
+
 .footer {
+  @include element-indent($footer-paddings, 'padding');
+
+  font-family: DMSans, sans-serif;
+
   &__title {
-    font-weight: 600;
+    font-weight: 500;
     font-size: 18px;
     line-height: 28px;
     letter-spacing: -0.2px;
@@ -11,9 +27,15 @@
     list-style: none;
     padding: 0;
 
+    li {
+      margin-bottom: 15px;
+    }
+
     .link {
       color: rgba(#000, 0.5);
       transition: color 0.15s ease-in;
+      font-size: 16px;
+      line-height: 22px;
 
       &:hover {
         text-decoration: none;
@@ -27,5 +49,16 @@
       display: block;
       margin-bottom: 24px;
     }
+
+    font-size: 16px;
+    line-height: 26px;
+  }
+
+  &__bottom {
+    @include element-indent($footer-bottom-margins, 'margin');
+
+    color: rgba(#000, 0.7);
+    font-size: 14px;
+    line-height: 22px;
   }
 }

@@ -1,0 +1,139 @@
+$purchase-card-head-margins: (
+  null: (0, 0, 20px, 0),
+  small: (0, 0, 25px, 0),
+  medium: (0, 0, 35px, 0),
+);
+
+$purchase-card-head-paddings: (
+  null: (0, 0, 15px, 0),
+  small: (0, 0, 20px, 0),
+  medium: (0, 0, 30px, 0),
+);
+
+$purchase-card-body-margins: (
+  null: (0, 0, 30px, 0),
+  small: (0, 0, 35px, 0),
+  medium: (0, 0, 40px, 0),
+);
+
+$purhase_card_head_font_sizes: (
+  null: (20px, 28px, normal),
+  small: (26px, 34px, -0.7px),
+  medium: (32px, 40px, -1px),
+);
+
+$purhase_card_list_font_sizes: (
+  null: (18px, 28px, normal),
+  small: (22px, 32px, -0.7px),
+  medium: (24px, 40px, -1px),
+);
+
+$purhase_card_label_font_sizes: (
+  null: (18px, 22px, normal),
+  small: (22px, 26px, -0.7px),
+  medium: (24px, 30px, -1px),
+);
+
+.purchase-card {
+  padding: 35px 40px 40px;
+  border-radius: 8px;
+  background-color: #fff;
+  max-width: 640px;
+  margin: auto;
+
+  &__head {
+    @include element-indent($purchase-card-head-margins, 'margin');
+    @include element-indent($purchase-card-head-paddings, 'padding');
+
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px rgba(#000, 0.1) solid;
+
+    p {
+      @include font-size($purhase_card_head_font_sizes);
+
+      font-weight: 600;
+      margin-bottom: 0;
+      margin-right: 15px;
+
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+
+  &__body {
+    @include element-indent($purchase-card-body-margins, 'margin');
+
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+  }
+
+  &__list {
+    @include font-size($purhase_card_list_font_sizes);
+
+    list-style: none;
+    padding: 0;
+    margin-right: 15px;
+    margin-bottom: 0;
+    order: 2;
+
+    li {
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-right: 17px;
+      }
+    }
+  }
+
+  &__label {
+    @include font-size($purhase_card_label_font_sizes);
+
+    order: 1;
+    margin-bottom: 15px;
+    font-weight: 600;
+
+    div {
+      display: flex;
+      align-items: center;
+
+      svg {
+        margin-right: 16px;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .purchase-card {
+    border-radius: 10px;
+
+    &__body {
+      flex-direction: row;
+    }
+
+    &__list {
+      order: 1;
+    }
+
+    &__label {
+      order: 2;
+      margin-bottom: 0;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .purchase-card {
+    border-radius: 12px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .purchase-card {
+    border-radius: 15px;
+  }
+}

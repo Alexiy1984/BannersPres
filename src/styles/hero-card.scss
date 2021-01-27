@@ -1,0 +1,79 @@
+$hero_card_title_font_sizes: (
+  null: (17px, 23px, normal),
+  small: (18px, 24px, -0.25px),
+  medium: (20px, 26px, -0.4px),
+);
+
+$hero_card_logo_font_sizes: (
+  null: (16px, 22px, normal),
+  small: (16px, 24px, -1px),
+  medium: (18px, 24px, -1px),
+);
+
+$hero_card_body_font_sizes: (
+  null: (14px, 18px, normal),
+  small: (16px, 20px, normal),
+  medium: (16px, 20px, -0.2px),
+);
+
+$hero_card_body-margins: (
+  null: (0, 0, 20px, 0),
+  small: (0, 0, 25px, 0),
+  medium: (0, 0, 28px, 0),
+);
+
+.hero-card {
+  background-color: #000;
+  color: #fff;
+  padding: 25px;
+  border-radius: 8px;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(#fff, 0.12);
+  }
+
+  &__title {
+    @include font-size($hero_card_title_font_sizes);
+
+    margin-bottom: 0;
+  }
+
+  &__logo {
+    @include font-size($hero_card_logo_font_sizes);
+
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 12px;
+    }
+  }
+
+  &__body {
+    @include font-size($hero_card_body_font_sizes);
+    @include element-indent($hero_card_body-margins, 'margin');
+  }
+}
+
+@include media-breakpoint-up(sm) {
+  .hero-card {
+    border-radius: 10px;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .hero-card {
+    border-radius: 12px;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .hero-card {
+    border-radius: 15px;
+  }
+}

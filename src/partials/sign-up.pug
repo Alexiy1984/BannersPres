@@ -1,0 +1,30 @@
+
+style(type='text/css').
+  #mc_embed_signup div.mce_inline_error {
+    position: absolute;
+    top: -40px;
+    padding: 5px 10px; 
+    background-color: rgb(173, 2, 2); 
+    color:#fff; 
+    border-radius: 5px;
+  }
+.sign-up
+  .container
+    .row
+      .col-12.offset-0.col-md-10.offset-md-1
+        .text-center.sign-up__logo 
+          include logoWhiteSvg
+        h2.title_lower.text-center Ok, i showed you the whole product. Now the choice is yours
+      .col-12.offset-0.col-md-8.offset-md-2
+        p.subtitle_higher.text-center We will help you to ideate, design and implement your product from conception to iterative app support
+      #mc_embed_signup.col-12.offset-0.col-md-8.offset-md-2
+        form#mc-embedded-subscribe-form.validate.row(action='https://design.us11.list-manage.com/subscribe/post?u=1f4eca0391ca7ebd97f795949&id=69e024e383' method='post' name='mc-embedded-subscribe-form' data-wow-duration='1s' data-wow-delay='0.4s' target='_blank' novalidate='novalidate')
+          .mc-field-group.form-group.position-relative.col-12.col-lg-7
+            input#mce-EMAIL.email.form-control.valid(type='email' value='' name='EMAIL' aria-invalid='false' placeholder='Type your email')
+            #mce-responses.clear
+              #mce-error-response.response(style='display:none;')
+              #mce-success-response.response(style='display:none;')
+          div(style='position: absolute; left: -5000px;' aria-hidden='true')
+            input(type='text' name='b_1f4eca0391ca7ebd97f795949_69e024e383' tabindex='-1' value='')
+          input#mc-embedded-subscribe.button_secondary.col-12.col-lg-5(type='submit' value='Subscribe on newsletter' name='subscribe')
+        script(type='text/javascript' src='//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js')

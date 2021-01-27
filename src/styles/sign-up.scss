@@ -1,0 +1,92 @@
+$sign-up-paddings: (
+  null: (60px, 0, 60px, 0),
+  small: (80px, 0, 80px, 0),
+  medium: (100px, 0, 100px, 0),
+);
+
+$sign-up-form-margins: (
+  null: (60px, 0, 0, 0),
+  small: (70px, 0, 0, 0),
+  medium: (80px, 0, 0, 0),
+);
+
+$sign-up-logo-margins: (
+  null: (0, 0, 25px, 0),
+  small: (0, 0, 28px, 0),
+  medium: (0, 0, 32px, 0),
+);
+
+.sign-up {
+  @include element-indent($sign-up-paddings, 'padding');
+
+  color: #fff;
+  background-color: #000;
+
+  .subtitle,
+  .subtitle_higher {
+    color: #fff;
+  }
+
+  &__logo {
+    @include element-indent($sign-up-logo-margins, 'margin');
+  }
+
+  form {
+    @include element-indent($sign-up-form-margins, 'margin');
+
+    position: relative;
+
+    .form-group {
+      padding: 0;
+      height: 100%;
+      margin-bottom: 15px;
+
+      input {
+        @include font-size($button_font_sizes);
+
+        padding: 14px 20px;
+        height: 100%;
+        border-radius: 10px;
+        border: none;
+
+        &:focus {
+          outline: none;
+        }
+      }
+    }
+
+    #mce-responses {
+      position: absolute;
+      top: -40px;
+      left: 0;
+
+      #mce-success-response {
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: rgb(3, 145, 50);
+      }
+
+      #mce-error-response {
+        padding: 5px 10px;
+        border-radius: 5px;
+        background-color: rgb(173, 2, 2);
+      }
+    }
+
+    #mc_embed_signup div.mce_inline_error {
+      position: absolute !important;
+      top: -35px;
+    }
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  .sign-up {
+    form {
+      .form-group {
+        padding-right: 15px;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

@@ -2,12 +2,15 @@
 @import "~bootstrap/scss/bootstrap";
 @import "variables";
 @import "mixins";
+@import "fontfaces";
+@import "~animate.css/animate.css";
 
 $body-color: #000;
 
 body {
   color: $body-color;
   font-family: sans-serif;
+  font-family: 'Manrope', sans-serif;
 }
 
 .title {
@@ -21,14 +24,42 @@ body {
   @include font-size($title_lower_sizes);
 
   font-weight: 700;
+  margin-bottom: 24px;
+}
+
+.title_hero {
+  @include font-size($title_hero_sizes);
+
+  font-weight: 700;
+  margin-bottom: 16px;
 }
 
 .subtitle {
   @include font-size($subtitle_sizes);
+
+  color: rgba(#000, 0.6);
 }
 
+.subtitle_hero {
+  @include font-size($subtitle_hero_sizes);
+
+  color: rgba(#000, 0.6);
+}
+
+.subtitle_higher {
+  @include font-size($subtitle_higher_sizes);
+
+  color: rgba(#000, 0.6);
+}
+
+@import 'navbar.scss';
+@import 'hero.scss';
+@import 'hero-card.scss';
+@import 'button.scss';
 @import 'sizes-box.scss';
 @import 'banners-show';
 @import 'banner-features.scss';
 @import 'purchase.scss';
-@import 'footer.scss'
+@import 'purchase-card.scss';
+@import 'sign-up.scss';
+@import 'footer.scss';

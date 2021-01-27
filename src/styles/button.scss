@@ -1,0 +1,59 @@
+$mainButtonColor: #fff;
+$mainButtonBakground: #000;
+$secondaryButtonColor: #000;
+$secondaryButtonBackground: rgba(170, 118, 255, 1);
+
+$button_font_sizes: (
+  null: (18px, 26px, normal),
+  small: (20px, 28px, -0.5px),
+  medium: (22px, 30px, -0.7px),
+);
+
+.button {
+  @include font-size($button_font_sizes);
+
+  padding: 14px 16px;
+  display: flex;
+  background-color: $mainButtonBakground;
+  color: $mainButtonColor;
+  border-radius: 10px;
+  justify-content: center;
+  font-weight: 500;
+  transition: background-color 0.15s ease-in, color 0.15s ease-in;
+  border: none;
+
+  &:hover {
+    cursor: pointer;
+    background-color: lighten($mainButtonBakground, 20);
+    text-decoration: none;
+    color: #fff;
+  }
+
+  &:focus {
+    outline: none;
+  }
+
+  &_secondary {
+    @extend .button;
+
+    background-color: $secondaryButtonBackground;
+    color: $secondaryButtonColor;
+
+    &:hover {
+      background-color: lighten($secondaryButtonBackground, 10);
+      color: lighten($secondaryButtonColor, 20);
+    }
+  }
+
+  &_inverted {
+    @extend .button;
+
+    background-color: $mainButtonColor;
+    color: $mainButtonBakground;
+
+    &:hover {
+      background-color: lighten($mainButtonBakground, 90);
+      color: $mainButtonBakground;
+    }
+  }
+}

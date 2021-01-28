@@ -16,6 +16,12 @@ $sign-up-logo-margins: (
   medium: (0, 0, 32px, 0),
 );
 
+$sign-up-subtitle-font-sizes: (
+  null: (22px, 28px, normal),
+  small: (28px, 34px, normal),
+  medium: (30px, 36px, -0.7px),
+);
+
 .sign-up {
   @include element-indent($sign-up-paddings, 'padding');
 
@@ -24,7 +30,12 @@ $sign-up-logo-margins: (
 
   .subtitle,
   .subtitle_higher {
+    @include font-size($sign-up-subtitle-font-sizes);
+
     color: #fff;
+    max-width: 639px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   &__logo {

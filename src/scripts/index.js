@@ -31,6 +31,15 @@ $(function() {
       $('.banners-show__row').hide();
       console.log(dataTarget[0]);
       dataTarget.show();
+      $(dataTarget).find('.banners-show__item').each(function() {
+        wow.show(this);
+      });
+      $(dataTarget).find('.banners-show__item_big').each(function() {
+        wow.show(this);
+      });
+      $(dataTarget).find('.banners-show__item_small').each(function() {
+        wow.show(this);
+      });
       $('.sizes-box__button').removeClass('active');
       $(this).addClass('active');
     }
